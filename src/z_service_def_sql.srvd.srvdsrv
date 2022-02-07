@@ -1,0 +1,5 @@
+@EndUserText.label: 'test SQL service'
+define service Z_SERVICE_DEF_SQL {
+  expose ZORDERSVIEW as Orders;
+  expose ZORDERITEMSVIEW as OrderItems;
+}

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SCO1" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SCO1>
+    <COMMUNICATION_SCENARIO_ID>Z_COMM_SCENARIO_SQL</COMMUNICATION_SCENARIO_ID>
+    <COMMUNICATION_SCENARIO_TYPE>1</COMMUNICATION_SCENARIO_TYPE>
+    <ALLOWED_CA_INSTANCES>1</ALLOWED_CA_INSTANCES>
+    <CONTAINS_INBOUND>X</CONTAINS_INBOUND>
+    <IB_TRUST_PSE_ID>SSLC_CUSTOMER_DEFAULT</IB_TRUST_PSE_ID>
+    <IB_BASIC_AUTH>X</IB_BASIC_AUTH>
+    <INBOUND_ROLE_ID>ZCR_A3GHAA5BHEPNZBEVWEGLZWDFHI</INBOUND_ROLE_ID>
+    <OB_AUTH_PSE_ID>SSLC_CUSTOMER_DEFAULT</OB_AUTH_PSE_ID>
+    <OB_TRUST_PSE_ID>SSLC_CUSTOMER_DEFAULT</OB_TRUST_PSE_ID>
+    <OB_BASIC_AUTH>X</OB_BASIC_AUTH>
+    <OB_X509_AUTH>X</OB_X509_AUTH>
+    <OB_OAUTH2_AUTH>X</OB_OAUTH2_AUTH>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <MAIN_OBJECT>
+     <NAME>Z_COMM_SCENARIO_SQL</NAME>
+     <TYPE>SCO1</TYPE>
+     <DESCRIPTION>Z_COMM_SCENARIO_SQL</DESCRIPTION>
+    </MAIN_OBJECT>
+    <SCOPE_STATUS>3</SCOPE_STATUS>
+    <SCOPE_STATUS_TEXT>On</SCOPE_STATUS_TEXT>
+    <INBOUND>
+     <item>
+      <COMMUNICATION_SCENARIO_ID>Z_COMM_SCENARIO_SQL</COMMUNICATION_SCENARIO_ID>
+      <INBOUND_ID>0001</INBOUND_ID>
+      <IBS_ID>S_PRIVILEGED_SQL1</IBS_ID>
+      <IBS_TYPE>SQL1</IBS_TYPE>
+      <IBS_TYPE_TEXT>SQL Service Binding</IBS_TYPE_TEXT>
+      <TEXT>Privileged access to SQL1 service binding objects</TEXT>
+     </item>
+    </INBOUND>
+    <AUTH>
+     <item>
+      <AUTH_OBJECT>S_SQL_VIEW</AUTH_OBJECT>
+      <STATUS>U</STATUS>
+      <TEXT>Access to SQL Views via ABAP SQL Service</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <AUTH_OBJECT>S_SQL_VIEW</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <TEXT>Access to SQL Views via ABAP SQL Service</TEXT>
+        <STATUS>U</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>SQL_SCHEMA</FIELD>
+          <VALUE>ZORDERS</VALUE>
+          <VALUES>
+           <item>
+            <LOW_VALUE>ZORDERS</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>ABAP SQL Service: SQL Schema Name (=Service Binding Name)</TEXT>
+          <STATUS>U</STATUS>
+         </item>
+         <item>
+          <FIELD>SQL_VIEW</FIELD>
+          <VALUE>*</VALUE>
+          <VALUES>
+           <item>
+            <LOW_VALUE>*</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>ABAP SQL Service: SQL View Name</TEXT>
+          <STATUS>U</STATUS>
+         </item>
+         <item>
+          <FIELD>SQL_VIEWOP</FIELD>
+          <VALUE>SELECT</VALUE>
+          <VALUES>
+           <item>
+            <LOW_VALUE>SELECT</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>ABAP SQL Service: Operation on SQL View</TEXT>
+          <STATUS>U</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+    </AUTH>
+   </SCO1>
+  </asx:values>
+ </asx:abap>
+</abapGit>
